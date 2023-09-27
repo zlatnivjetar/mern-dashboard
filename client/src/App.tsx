@@ -60,7 +60,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    "https://refine-dashboard-wui2.onrender.com/0/api/v1/users",
+                    "https://refine-dashboard-wui2.onrender.com/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -131,7 +131,7 @@ function App() {
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
                 <Refine
-                    dataProvider={dataProvider("https://refine-dashboard-wui2.onrender.com/api/v1")}
+                    dataProvider={dataProvider("https://refine-dashboard-wui2.onrender.com")}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
